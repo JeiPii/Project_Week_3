@@ -1,4 +1,6 @@
 <?php
+//Require zal de pagina niet laden als de connectie niet lukt. include wel
+include_once '././connectDataBase/connectDatabase.php';
 // This code gets a workshop dropdown bar
 echo "<select id='customerInfo' name='productSubscription'>";
 
