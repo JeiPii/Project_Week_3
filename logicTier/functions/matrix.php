@@ -12,8 +12,8 @@
 </head>
 <body>
 
-<div id="CustomerTableDiv">
-    <table class="EduchainTable">
+<div id="customerTableDiv">
+    <table class="eduChainTable">
         <tr>
             <th>ID</th>
             <th>First name</th>
@@ -28,7 +28,7 @@
 
         while($row = $stmt->fetch()){
         $id= $row["customerID"];
-        echo "<tr><td>" .$row["customerID"]."</td><td>" .$row["firstname"]. "</td><td>" .$row["lastname"]. "</td><td>" .$row["e-mail"]."</td><td><button class='button' style='vertical-align:middle' onclick='window.location.href=`customerInfo.php?id=$id`'>Details</button></td></tr>";
+        echo "<tr><td>" .$row["customerID"]."</td><td>" .$row["firstname"]. "</td><td>" .$row["lastname"]. "</td><td>" .$row["e-mail"]."</td><td><button class='button' style='vertical-align:middle' onclick='window.location.href=`moreDetailsMatrix.php?id=$id`'>Details</button></td></tr>";
         }
         echo "</table>";
         ?>
