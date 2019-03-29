@@ -1,7 +1,5 @@
 <?php
 
-
-
 function pullFromDatabase() {
     //includes connetction
     include_once('../connectToDatabase/connectDatabase.php');
@@ -17,3 +15,4 @@ function pullFromDatabase() {
 }
 
 pullFromDatabase();
+?>
