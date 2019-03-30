@@ -1,4 +1,4 @@
-<?php include_once './connectDatabase.php'; ?>
+<?php require_once './connectDatabase.php'; ?>
 
 <!DOCTYPE html>
 <html>
