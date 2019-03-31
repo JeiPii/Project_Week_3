@@ -1,16 +1,22 @@
-<?php require_once './connectDatabase.php'; 
-if(isset($_POST["submit"])){ //post created
+<?php 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL); 
 
-    try {
-        $sql = "
-    
-        INSERT INTO `registration` (`OV_NumberID`, `FirstName`, `LastName`)
-        VALUES ('".$_POST["OV_Number"]."', '".$_POST["Firstname_db"]."', '".$_POST["Lastname_db"]."');
-    
-        INSERT INTO `studentspick` (`WorkshopID`, `Ov-Number`)
-        VALUES ('".$_POST["stu_workshop"]."', '".$_POST["OV_Number"]."');
-    
-        ";
+        $salutation = $_POST["salutation"];
+        $firstname = $_POST["firstname"];
+        $lastname = $_POST["lastname"];
+        $age = $_POST["age"];
+        $email = $_POST["email"];
+        $companyName = $_POST["companyName"];
+        $kvk = $_POST["kvk"];
+        $tier = $_POST["tier"];
+        $moreInfo = $_POST["moreInfo"];
+
+try {   
+        require_once './connectDatabase.php';
+
+        $sql = "INSERT INTO `customerinfo` (`customerID`, `AssignmentID`, `contactPersonID`, `locationID`, `orderID`, `salutation`, `firstname`, `lastname`, `age`, `e-mail`, `companyName`, `KvK`, `productSubscription`, `moreInfo`) VALUES (NULL, NULL, NULL, NULL, NULL, '$salutation', '$firstname', '$lastname', '$age', '$email', '$companyName', '$kvk', '$tier', '$moreInfo');";
     
             if ($db_conn->query($sql))
         {
@@ -26,7 +32,10 @@ if(isset($_POST["submit"])){ //post created
             catch(PDOException $e)
         {
             echo $e->getMessage();
-        }
-    } //Post finished
+        }; //Post finished
+        
+        // 
+
     ?>
+
 

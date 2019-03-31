@@ -1,4 +1,4 @@
-<?php include_once 'databaseconnection.php'; ?>
+<?php include_once 'connectDatabase.php'; ?>
 <!-- made byJordi -->
 <!DOCTYPE html>
 <html>
