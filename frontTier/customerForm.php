@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Formulier gedeelte voor klanten</title>
-        <link rel="stylesheet" href="text/css" href="">
+        <link rel="stylesheet" href="text/css" href="css/style.css">
     </head>
 <!--TODO: Add all fields to the form and make them send it to formToDatabase-->
 <body> 
