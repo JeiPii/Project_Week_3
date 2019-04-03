@@ -3,14 +3,16 @@
     <head>
         <title>Formulier gedeelte voor klanten</title>
         <link rel="stylesheet" href="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
 <!--TODO: Add all fields to the form and make them send it to formToDatabase-->
 <body> 
     <div id="customerFormComplete">
-        <h1>Customer Form</h1>
+        <h1>Customer Form<i class="fas fa-glasses"></i></h1>
             <form action="../logicTier/functions/formToDatabase.php" method="POST" >
                 <label for="Subscription">
                 </label>
+                
                 <label for="salutation">Aanhef:</label>
                 <select name="salutation">
                 <option value="Mr">Mr</option>
