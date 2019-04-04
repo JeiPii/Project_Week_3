@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Formulier gedeelte voor klanten</title>
+        <link rel="stylesheet" href="./css/styleMe.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+<!--TODO: Add all fields to the form and make them send it to formToDatabase-->
+<body> 
+    <div id="customerFormComplete">
+        <h1>Customer Form </h1>
+            <form action="../logicTier/functions/formToDatabase.php" method="POST" id="formInput">
+                <ol> <li>
+                    <label for="salutation">Aanhef:</label>
+                    <select name="salutation">
+                    <option value="Mr">Mr</option>
+                    <option value="Mv">Mv</option>
+                    </select> </li><li>
+                    <label for="firstname">Voornaam:</label>
+                    <input type="text" name="firstname" >
+                    </li> <li>
+                    <label for="lastname">Achternaam:</label>
+                    <input type="text" name="lastname"></li><li>
+                    <label for="age">Leeftijd:</label>
+                    <input type="number" name="age" maxlength="3"></li><li>
+                    <label for="email">E-Mail:</label>
+                    <input type="text" name="email"></li><li>
+                    <label for="companyName">Bedrijfs Naam:</label>
+                    <input type="text" name="CompanyName"></li><li>
+                    <label for="KvK">kvk:</label>
+                    <input type="number" name="kvk" maxlength="10"></li><li>
+                    <label for="productSubscription">Tier:</label>
+                    <select name="tierPicker">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    </select> </li><li>
+                    <label for="moreInfo">More info: </label>
+                    <input type="text" name="moreInfo"></li><li>
+                    <input type="submit" value="Submit" id="send"></li>
+                </ol>
+            </form>
+    </div>
+</body>
+</html>

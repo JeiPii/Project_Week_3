@@ -1,0 +1,101 @@
+
+
+body{
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+input {
+    width: 100%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(115, 28, 196);
+    border-radius: 25px;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+select{
+    width: 100%;
+    padding: 7px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(115, 28, 196);
+    border-radius: 25px;
+}
+
+#formInput td, #formInput th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+#formInput th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(115, 28, 196);
+    color: white;
+}
+
+
+#customerFormComplete {
+    margin-left: auto ;
+    margin-right: auto ;
+    position: relative;
+    top: 25px;
+    width: 284px;
+    border: 2px solid rgb(115, 28, 196) ;
+}
+
+#send {
+    background-color: rgb(115, 28, 196);
+    color: white;
+    width: 100%;
+    border:2px solid rgb(115, 28, 196);
+
+    /* height: 40px; */
+}
+#send[type=submit]:hover {
+    width: 100%;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border:2px solid rgb(115, 28, 196);
+    color: rgb(115, 28, 196);
+}
+
+form#formInput li {
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+}
+form#formInput label{
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
+    width: 120px; /* Width of labels */
+}
+form#formInput ol{
+    margin: 0;
+    padding: 0;
+}
+
+
