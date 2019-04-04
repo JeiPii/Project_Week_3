@@ -1,6 +1,6 @@
 <?php
 
-    include_once 'databaseconnection.php';
+    include_once '/./.connectDatabase.php';
 
     $input = $_GET['insert'];
 

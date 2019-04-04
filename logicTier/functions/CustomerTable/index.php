@@ -15,7 +15,7 @@
 <i class="fas fa-search"></i>
     <div id="result">
     <?php
-        include_once 'databaseconnection.php';
+        include_once '/./.connectDatabase.php';
         $stmt = $db_conn->prepare("SELECT * FROM customerinfo");
         $stmt->execute();
 
