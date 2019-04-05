@@ -2,7 +2,7 @@
 
 body{
     background-color: white;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px;
@@ -14,8 +14,12 @@ input {
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid rgb(115, 28, 196);
+    border: 2px solid #fff !important;
     border-radius: 25px;
+    outline: none !important;
+    -webkit-appearance: none !important;  
+    -moz-appearance: none !important;
+    appearance: none !important
 }
 
 body {
@@ -23,11 +27,20 @@ body {
 }
 
 input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-    appearance: none;
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]{ 
+    -webkit-appearance: none !important;  
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
     margin: 0; 
+}
+
+input[type=number]:hover,
+input[type=number]:focus,
+input[type=number]{
+    -moz-appearance:textfield; /* Firefox */
+    -moz-appearance:none;
 }
 
 select{
@@ -35,8 +48,12 @@ select{
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid rgb(115, 28, 196);
+    border: 2px solid white;
     border-radius: 25px;
+    outline: none !important;
+    -webkit-appearance: none !important;  
+    -moz-appearance: none !important;
+    appearance: none !important
 }
 
 #formInput td, #formInput th {
@@ -63,23 +80,26 @@ h1{
     position: relative;
     top: 25px;
     width: 284px;
-    border: 2px solid rgb(115, 28, 196) ;
+    border: 2px solid #fff !important;
+    background: -webkit-linear-gradient(50deg,#ff6ec4,#7873f5) !important;
+    background: -o-linear-gradient(50deg,#ff6ec4,#7873f5) !important;
+    background: linear-gradient(40deg,#ff6ec4,#7873f5) !important;
 }
 
 #send {
     background-color: rgb(115, 28, 196);
     color: white;
     width: 100%;
-    border:2px solid rgb(115, 28, 196);
-
+    border: 2px solid transparent !important;
     /* height: 40px; */
 }
 #send[type=submit]:hover {
     width: 100%;
     cursor: pointer;
     background-color: whitesmoke;
-    border:2px solid rgb(115, 28, 196);
-    color: rgb(115, 28, 196);
+    border: 2px solid #fff !important;
+    background-color: transparent !important;
+    color: #fff !important;
 }
 
 form#formInput li {
