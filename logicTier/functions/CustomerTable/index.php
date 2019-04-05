@@ -15,11 +15,11 @@
 <i class="fas fa-search"></i>
     <div id="result">
     <?php
-        include_once '/./.connectDatabase.php';
+        require_once '../connectDatabase.php';      // DB conn
         $stmt = $db_conn->prepare("SELECT * FROM customerinfo");
         $stmt->execute();
 
-        include_once("tableresults.php");
+        require_once 'tableresults.php';
     ?>
     </div>
 </div>
