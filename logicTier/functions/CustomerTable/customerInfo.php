@@ -1,5 +1,5 @@
-<?php include_once 'connectDatabase.php'; ?>
-<!-- made byJordi -->
+<?php include_once '/./.connectDatabase.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
 
 $id= $_GET['id'];
 
-$stmt = $pdo->prepare("SELECT * FROM customerinfo WHERE customerID = $id");
+$stmt = $db_conn->prepare("SELECT * FROM customerinfo WHERE customerID = $id");
 $stmt->execute();
     
     while($row = $stmt->fetch()){
@@ -30,7 +30,7 @@ $stmt->execute();
     echo "<tr><th>Firstname</th><td>".$row["firstname"]."</td></tr>";
     echo "<tr><th>Lastname</th><td>".$row["lastname"]."</td></tr>";
     echo "<tr><th>Age</th><td>".$row["age"]."</td></tr>";
-    echo "<tr><th>E-mail</th><td>".$row["e-mail"]."</td></tr>";
+    echo "<tr><th>E-mail</th><td>".$row["email"]."</td></tr>";
     echo "<tr><th>Companyname</th><td>".$row["companyName"]."</td></tr>";
     echo "<tr><th>KvK</th><td>".$row["KvK"]."</td></tr>";
     echo "<tr><th>ProductSubscription</th><td>".$row["productSubscription"]."</td></tr>";

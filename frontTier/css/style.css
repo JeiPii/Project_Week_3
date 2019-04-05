@@ -5,9 +5,6 @@ header,
     height: 100%;
 }
 
-
-
-
 @media (max-width: 740px) {
     html,
     body,
@@ -67,15 +64,16 @@ header,
 footer.page-footer {
     background-color: #9da4b1;
 }
+
 body {
     background-color: whitesmoke;
 }
+
 
 .EduchainTable{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-collapse: collapse;
     width: 700px;
-
 }
 
 .EduchainTable td, .EduchainTable th {
@@ -83,6 +81,7 @@ body {
     padding: 8px;
     text-align: center;
 }
+
 
 .EduchainTable th{
     padding-top: 12px;
@@ -113,4 +112,39 @@ body {
   .button:hover {
       cursor: pointer;
       background-color: rgba(115, 28, 196, 0.37);
+
   }
+
+  }
+
+#ResultDiv {
+    position: relative;
+    top: 200px;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 6px 10px 6px 20px;
+    padding-left: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+ 
+input[type=text]:focus {
+width: 200px;
+}
+
+#ResultDiv i {
+position: absolute;
+left: 7px;
+top: 9px;
+color: rgb(115, 28, 196);
+}
