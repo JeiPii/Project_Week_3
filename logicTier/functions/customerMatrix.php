@@ -17,7 +17,7 @@
 
 $id= $_GET['id'];
 
-$stmt = $pdo->prepare("SELECT * FROM customerinfo WHERE customerID = $id");
+$stmt = $db_conn->prepare("SELECT * FROM customerinfo WHERE customerID = $id");
 $stmt->execute();
     
     while($row = $stmt->fetch()){
