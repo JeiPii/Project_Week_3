@@ -1,4 +1,8 @@
-<?php require_once './connectDatabase.php'; ?>
+<?php 
+require_once './connectDatabase.php'; 
+//login check
+require_once('loginCheck.php');
+?>
 
 <!DOCTYPE html>
 <html>

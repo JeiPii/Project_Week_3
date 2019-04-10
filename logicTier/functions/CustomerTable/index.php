@@ -1,3 +1,7 @@
+<?php 
+//login check
+require_once('../loginCheck.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
