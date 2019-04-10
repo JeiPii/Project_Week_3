@@ -13,9 +13,10 @@ $html = <<<OUTPUT
 OUTPUT;
 
     while($row = $stmt->fetch()){
-        $id= $row["customerID"];
-        $html .= "<tr><td>" .$row["customerID"]."</td><td>" .$row["firstname"]. "</td><td>" .$row["lastname"]. "</td><td>" .$row["email"]."</td><td><button class='button' style='vertical-align:middle' onclick='window.location.href=`customerinfo.php?id=$id`'>Details</button></td></tr>";
-        }
-        $html .= "</table>";
+    $id= $row["customerID"];
+    $html .= "<tr><td>" .$row["customerID"]."</td><td>" .$row["firstname"]. "</td><td>" .$row["lastname"]. "</td><td>" .$row["email"]."</td><td><button class='button' style='vertical-align:middle' onclick='window.location.href=`customerinfo.php?id=$id`'>Details</button></td></tr>";
+}
+    $html .= "</table>";
 
         echo $html;
+?>

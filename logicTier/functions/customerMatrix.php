@@ -1,5 +1,5 @@
-<?php include_once '././connectDatabase.php'; ?>
-
+<?php include_once 'connectDatabase.php'; ?>
+<!-- made byJordi -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,13 +30,12 @@ $stmt->execute();
     echo "<tr><th>Firstname</th><td>".$row["firstname"]."</td></tr>";
     echo "<tr><th>Lastname</th><td>".$row["lastname"]."</td></tr>";
     echo "<tr><th>Age</th><td>".$row["age"]."</td></tr>";
-    echo "<tr><th>E-mail</th><td>".$row["email"]."</td></tr>";
+    echo "<tr><th>E-mail</th><td>".$row["e-mail"]."</td></tr>";
     echo "<tr><th>Companyname</th><td>".$row["companyName"]."</td></tr>";
     echo "<tr><th>KvK</th><td>".$row["KvK"]."</td></tr>";
     echo "<tr><th>ProductSubscription</th><td>".$row["productSubscription"]."</td></tr>";
     echo "<tr><th>MoreInfo</th><td>".$row["moreInfo"]."</td></tr>";
-    echo "<tr><th></th><td rowspan='2'><button class='button' style='vertical-align:middle' 
-    onclick='window.location.href=`index.php`'>Terug</button></td></tr>";
+    echo "<tr><th></th><td rowspan='2'><button class='button' style='vertical-align:middle' onclick='window.location.href=`index.php`'>Terug</button></td></tr>";
 
 
 
