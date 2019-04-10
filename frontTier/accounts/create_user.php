@@ -1,6 +1,7 @@
 <?php 
 //login check
 require_once('../../logicTier/functions/loginCheck.php');
+require_once('../../logicTier/functions/functionsPdo');
 ?>
 <!DOCTYPE html>
 <html>

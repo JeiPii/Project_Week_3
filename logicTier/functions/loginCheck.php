@@ -1,6 +1,5 @@
 <?php
 include('connectDatabase.php');
-include('functionsPdo.php');
 
 if (!isAdmin()) {
 	$_SESSION['msg'] = "You must log in first";

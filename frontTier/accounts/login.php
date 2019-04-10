@@ -1,6 +1,7 @@
 <?php 
 //login check
 require_once('../../logicTier/functions/loginCheck.php');
+require_once('../../logicTier/functions/functionsPdo.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,9 +28,6 @@ require_once('../../logicTier/functions/loginCheck.php');
 		<div class="input-group">
 			<button type="submit" class="btn" name="login_btn">Login</button>
 		</div>
-		<p>
-			Not yet a member? <a href="register.php">Sign up</a>
-		</p>
 	</form>
 </body>
 </html>
