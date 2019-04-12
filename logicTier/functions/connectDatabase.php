@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "Webserver";
 $password = "dD25CpeSUEwe";
-$dbName = "crm"; 
+$dbName = "crm";
 try {
     $db_conn = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);
     // set the PDO error mode to exception

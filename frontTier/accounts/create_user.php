@@ -1,7 +1,6 @@
 <?php 
-//login check
-require_once('../../logicTier/functions/loginCheck.php');
-require_once('../../logicTier/functions/functionsPdo');
+require_once('../../logicTier/functions/functionsPdo.php');
+require_once('../../logicTier/functions/adminCheck.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,12 +17,16 @@ require_once('../../logicTier/functions/functionsPdo');
 
 
 		<div class="input-group">
-			<label>Username</label>
-			<input type="text" name="username" value="<?php echo $username; ?>">
+			<label>First name</label>
+			<input type="text" name="firstName">
+		</div>
+		<div class="input-group">
+			<label>Last name</label>
+			<input type="text" name="lastName">
 		</div>
 		<div class="input-group">
 			<label>Email</label>
-			<input type="email" name="email" value="<?php echo $email; ?>">
+			<input type="email" name="email">
 		</div>
 		<div class="input-group">
 			<label>User type</label>

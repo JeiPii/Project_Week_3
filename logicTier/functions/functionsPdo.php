@@ -23,7 +23,8 @@ function connection() {
 }
 
 
-$username = "";
+$firstName = "";
+$lastName = "";
 $email    = "";
 $errors   = array(); 
 
@@ -36,18 +37,22 @@ if (isset($_POST['register_btn'])) {
 // REGISTER USER
 function register(){
 	// call these variables with the global keyword to make them available in function
-	global $errors, $username, $email;
+	global $errors, $firstName, $lastName, $email;
 
 
     // defined below to escape form values
-	$username    =  $_POST['username'];
+	$firstName   =  $_POST['firstName'];
+	$lastName    =  $_POST['lastName'];
 	$email       =  $_POST['email'];
 	$password_1  =  $_POST['password_1'];
 	$password_2  =  $_POST['password_2'];
 
 	// form validation: ensure that the form is correctly filled
-	if (empty($username)) { 
-		array_push($errors, "Username is required"); 
+	if (empty($firstName)) { 
+		array_push($errors, "First name is required"); 
+	}
+	if (empty($lastName)) { 
+		array_push($errors, "Last name is required"); 
 	}
 	if (empty($email)) { 
 		array_push($errors, "Email is required"); 
@@ -70,16 +75,15 @@ function register(){
 
             $user_type = $_POST['user_type'];
             $pdo = connection();
-            $sql = "INSERT INTO users (username, email, user_type, password) VALUES('$username', '$email', '$user_type', '$password')";
+            $sql = "INSERT INTO coworker (firstName, lastName, Email, user_type, Password) VALUES('$firstName', '$lastName', '$email', '$user_type', '$password')";
             $data = $pdo->query($sql);
             $_SESSION['success']  = "New user successfully created!!";
-            header('location: admin.php');
-
+			header('location: ../../frontTier/dashboard/index.php');	
 
 		}else{
 
             $pdo = connection();
-            $sql = "INSERT INTO users (username, email, user_type, password) VALUES('$username', '$email', '$user_type', '$password')";
+            $sql = "INSERT INTO coworker (firstName, lastName, Email, user_type, Password) VALUES('$firstName', '$lastName', '$email', '$user_type', '$password')";
             $data = $pdo->query($sql);
 
             // get id of the created user
@@ -90,7 +94,7 @@ function register(){
 
 			$_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
 			$_SESSION['success']  = "You are now logged in";
-			header('location: admin.php');				
+			header('location: ../../frontTier/dashboard/index.php');				
 		}
 	}
 }
@@ -99,8 +103,8 @@ function register(){
 function getUserById($id){
 
     $pdo = connection();
-    $sql = "SELECT * FROM users WHERE id=?";
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE id=?");
+    $sql = "SELECT * FROM coworker WHERE id=?";
+    $stmt = $pdo->prepare("SELECT * FROM coworker WHERE id=?");
     $stmt->execute([$id]);
     $data = $stmt->fetchAll();
     return $user;
@@ -133,13 +137,13 @@ function isLoggedIn()
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
-	header("location: login.php");
+	header('location: ../../frontTier/accounts/login.php');
 }
 // log user out if logout button clicked
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
-	header("location: login.php");
+	header('location: ../../frontTier/accounts/login.php');
 }
 // call the login() function if register_btn is clicked
 if (isset($_POST['login_btn'])) {
@@ -149,14 +153,17 @@ if (isset($_POST['login_btn'])) {
 
 // LOGIN USER
 function login(){
-	global $errors, $username, $email;
+	global $errors;
 	// grap form values
-	$username = $_POST['username'];
-    $password = $_POST['password'];
-    
+	$firstName = $_POST['firstName'];
+	$lastName = $_POST['lastName'];
+	$password  =  $_POST['password'];
 	// make sure form is filled properly
-	if (empty($username)) {
-		array_push($errors, "Username is required");
+	if (empty($firstName)) {
+		array_push($errors, "First name is required");
+	}
+	if (empty($lastName)) {
+		array_push($errors, "Last name is required");
 	}
 	if (empty($password)) {
 		array_push($errors, "Password is required");
@@ -166,7 +173,7 @@ function login(){
 	// attempt login if no errors on form
 	if (count($errors) == 0) {
 		$pdo = connection();
-		$sql = "SELECT password FROM users WHERE username='$username'";
+		$sql = "SELECT password FROM coworker WHERE firstName='$firstName' AND lastName='$lastName'";
         $hash = $pdo->query($sql)->fetchColumn();
 
 
@@ -175,7 +182,7 @@ function login(){
 		//$password_verify
 		if	(password_verify($password, $hash)) {
 
-			$sql = "SELECT user_type FROM users WHERE username='$username'";
+			$sql = "SELECT user_type FROM coworker WHERE firstName='$firstName' AND lastName='$lastName'";
 			$results = $pdo->query($sql)->fetchColumn();
 
 			$logged_in_user['user_type'] = $results;
@@ -187,29 +194,17 @@ function login(){
 
 					$_SESSION['user'] = $logged_in_user;
 					$_SESSION['success']  = "You are now logged in";
-					header('location: admin.php');		  
+					header('location: ../../frontTier/dashboard/index.php');	
 				}else{
 					$_SESSION['user'] = $logged_in_user;
 					$_SESSION['success']  = "You are now logged in";
 
-					header('location: admin.php');
+					header('location: ../../frontTier/dashboard/index.php');
 				}
-			}else {
-				array_push($errors, "Wrong username");
 			}
 		}else {
-			array_push($errors, "Wrong password");
+			array_push($errors, "Wrong name or password");
 		}	
 	}	
 }
-function isAdmin()
-{
-	if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin' ) {
-		return true;
-    }
-    if(isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'user' ){
-        return true;
-    }else{
-        return false;
-    }
-}
+

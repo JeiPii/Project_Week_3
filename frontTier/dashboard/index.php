@@ -19,8 +19,9 @@
 <body class="fixed-sn deep-purple-skin">
 <?php 
 //login check
-require_once('../../logicTier/functions/loginCheck.php');
 require_once('../../logicTier/functions/functionsPdo.php');
+require_once('../../logicTier/functions/loginCheck.php');
+
 
 ?>    
     <!--Double navigation-->
