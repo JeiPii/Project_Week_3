@@ -35,8 +35,7 @@ $stmt->execute();
     echo "<tr><th>KvK</th><td>".$row["KvK"]."</td></tr>";
     echo "<tr><th>ProductSubscription</th><td>".$row["productSubscription"]."</td></tr>";
     echo "<tr><th>MoreInfo</th><td>".$row["moreInfo"]."</td></tr>";
-    echo "<tr><th></th><td rowspan='2'><button class='button' style='vertical-align:middle' 
-    onclick='window.location.href=`index.php`'>Terug</button></td></tr>";
+    echo "<tr><th></th><td rowspan='2'><button class='button' style='vertical-align:middle' onclick='window.location.href=`customertable.php`'>Terug</button></td></tr>";
 
 
 

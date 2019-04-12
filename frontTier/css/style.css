@@ -68,49 +68,21 @@ footer.page-footer {
 body {
     background-color: whitesmoke;
 }
-input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /* background-image: url('searchicon.png'); */
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 6px 10px 6px 20px;
-    padding-left: 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-input[type=text]:focus {
-width: 200px;
-}
-#CustomerTableDiv {
-    position: relative;
-    top: 200px;
-    width: 700px;
-}
-#ResultDiv {
-    position: relative;
-    top: 200px;
-}
-#ResultDiv i {
-    position: absolute;
-    left: 7px;
-    top: 9px;
-    color: rgb(115, 28, 196);
-}
+
+
 .EduchainTable{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-collapse: collapse;
     width: 700px;
 }
+
 .EduchainTable td, .EduchainTable th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
+
+
 .EduchainTable th{
     padding-top: 12px;
     padding-bottom: 12px;
@@ -118,9 +90,16 @@ width: 200px;
     background-color: rgb(115, 28, 196);
     color: white;
 }
-.EduchainTable tr:nth-child(even){
-    background-color: #f2f2f2;
+
+.EduchainTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#CustomerTableDiv {
+    position: relative;
+    top: 200px;
+    width: 700px;
 }
+
+
 .button {
     position: relative;
     background-color: rgb(115, 28, 196);
@@ -128,10 +107,44 @@ width: 200px;
     color: white;
     width: 100px;
     height: 40px;
-}
-.button:hover {
-    cursor: pointer;
-    background-color: rgba(115, 28, 196, 0.37);
+  }
+
+  .button:hover {
+      cursor: pointer;
+      background-color: rgba(115, 28, 196, 0.37);
+
+  }
+
+  }
+
+#ResultDiv {
+    position: relative;
+    top: 200px;
 }
 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 6px 10px 6px 20px;
+    padding-left: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+ 
+input[type=text]:focus {
+width: 200px;
+}
 
+#ResultDiv i {
+position: absolute;
+left: 7px;
+top: 9px;
+color: rgb(115, 28, 196);
+}

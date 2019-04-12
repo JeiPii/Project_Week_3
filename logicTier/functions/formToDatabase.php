@@ -8,23 +8,25 @@
         $lastname = $_POST["lastname"];
         $age = $_POST["age"];
         $email = $_POST["email"];
-        $companyName = $_POST["companyName"];
+        $companyName = $_POST["CompanyName"];
         $kvk = $_POST["kvk"];
-        $tier = $_POST["tier"];
+        $tier = $_POST["tierPicker"];
         $moreInfo = $_POST["moreInfo"];
 
 try {   
         require_once './connectDatabase.php';
 
-        $sql = "INSERT INTO `customerinfo` (`customerID`, `AssignmentID`, `contactPersonID`, `locationID`, `orderID`, `salutation`, `firstname`, `lastname`, `age`, `e-mail`, `companyName`, `KvK`, `productSubscription`, `moreInfo`) VALUES (NULL, NULL, NULL, NULL, NULL, '$salutation', '$firstname', '$lastname', '$age', '$email', '$companyName', '$kvk', '$tier', '$moreInfo');";
+        $sql = "INSERT INTO `customerinfo` (`customerID`, `AssignmentID`, `contactPersonID`, `locationID`, `orderID`, `salutation`, `firstname`, `lastname`, `age`, `email`, `companyName`, `KvK`, `productSubscription`, `moreInfo`) VALUES (NULL, NULL, NULL, NULL, NULL, '$salutation', '$firstname', '$lastname', '$age', '$email', '$companyName', '$kvk', '$tier', '$moreInfo');";
     
             if ($db_conn->query($sql))
         {
-            echo "<script type= 'text/javascript'>console.log('New Record Inserted Successfully');</script>";
+            echo "Succes";
+            header("refresh:1.0; url=../../frontTier/index.php");
         }
             else
         {
-            echo "<script type= 'text/javascript'>console.log('Data not successfully Inserted.');</script>";
+            echo "Failed";
+            header("refresh:1.0; url=../../frontTier/index.php");
         }
     
             $db_conn = null;
