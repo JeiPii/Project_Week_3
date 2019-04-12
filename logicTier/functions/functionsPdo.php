@@ -137,13 +137,24 @@ function isLoggedIn()
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
-	header('location: ../../frontTier/accounts/login.php');
+	header('location: ../../frontTier/index.html');
 }
 // log user out if logout button clicked
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
-	header('location: ../../frontTier/accounts/login.php');
+	header('location: ../../frontTier/index.html');
+}
+
+function out1() {
+	session_destroy();
+	unset($_SESSION['user']);
+	header('location: ../../frontTier/index.html');
+}
+function out2() {
+	session_destroy();
+	unset($_SESSION['user']);
+	header('location: ../../frontTier/index.html');
 }
 // call the login() function if register_btn is clicked
 if (isset($_POST['login_btn'])) {
@@ -207,4 +218,23 @@ function login(){
 		}	
 	}	
 }
-
+function isUser()
+{
+	if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin' ) {
+		return true;
+    }
+    if(isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'user' ){
+        return true;
+    }else{
+        return false;
+    }
+}
+function isAdmin()
+{
+	if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin' ) {
+		return true;
+	}else{
+		return false;
+	}
+}
+?>

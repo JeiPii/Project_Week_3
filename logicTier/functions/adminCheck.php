@@ -11,12 +11,5 @@ if (isset($_GET['logout'])) {
 	unset($_SESSION['user']);
 	header("location: ../../frontTier/accounts/login.php");
 }
-function isAdmin()
-{
-	if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin' ) {
-		return true;
-	}else{
-		return false;
-	}
-}
+
 ?>

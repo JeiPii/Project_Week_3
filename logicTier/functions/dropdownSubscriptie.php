@@ -1,7 +1,7 @@
 <?php 
 //login check
-require_once('loginCheck.php');
 require_once('functionsPdo.php');
+require_once('loginCheck.php');
 // Require zal de pagina niet laden als de connectie niet lukt. include wel
 // This code gets a workshop dropdown bar
 echo "<select id='subscriptionsID' name='tier'>";

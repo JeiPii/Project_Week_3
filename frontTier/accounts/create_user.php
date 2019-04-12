@@ -1,13 +1,13 @@
 <?php 
 //login check
-require_once('../../logicTier/functions/loginCheck.php');
 require_once('../../logicTier/functions/functionsPdo.php');
+require_once('../../logicTier/functions/adminCheck.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Registration system PHP and MySQL - Create user</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../css/create_user.css">
 </head>
 <body>
 	<div class="header">

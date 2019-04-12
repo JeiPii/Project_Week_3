@@ -5,11 +5,11 @@ require_once('../../logicTier/functions/functionsPdo.php');
 <html>
 <head>
 	<title>Registration system PHP and MySQL</title>
-	<link rel="stylesheet" type="text/css" href="register.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 <body>
 	<div class="header">
-		<h2>Login</h2>
+		<h2></h2>
 	</div>
 	<form method="post" action="login.php">
 
