@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+//login check
+require_once('../functionsPdo.php');
+require_once('../loginCheck.1.php');
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -13,7 +18,7 @@
 <div id="ResultDiv">
 <input type='text' placeholder="Search..." id='txtSearch' onKeyUp='tableSearch();' />
     <i class="fas fa-search"></i>
-    <button id="TerugButton" class="button" onclick="window.location.href='../../../frontTier/dashboard/index.html'">Terug</button>
+    <button id="TerugButton" class="button" onclick="window.location.href='../../../frontTier/dashboard/index.php'">Terug</button>
     <div id="result">
     <?php
         include_once '../connectDatabase.php';
