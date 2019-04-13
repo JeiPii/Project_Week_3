@@ -4,8 +4,8 @@ session_start();
 function connection() {
     $host       = 'localhost'; // == localhost
     $db         = 'crm';
-    $user       = 'root';
-    $pass       = '1234';
+    $user       = 'Webserver';
+    $pass       = 'dD25CpeSUEwe';
     $charset    = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
