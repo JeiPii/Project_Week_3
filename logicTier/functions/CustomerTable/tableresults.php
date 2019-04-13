@@ -1,4 +1,7 @@
 <?php
+//login check
+require_once('../functionsPdo.php');
+require_once('../loginCheck.1.php');
 //Heredoc
 $html = <<<OUTPUT
         <div id="CustomerTableDiv">

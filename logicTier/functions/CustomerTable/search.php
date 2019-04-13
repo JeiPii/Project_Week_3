@@ -1,5 +1,7 @@
 <?php
-
+    //login check
+    require_once('../functionsPdo.php');
+    require_once('../loginCheck.1.php');
     include_once '../connectDatabase.php';
 
     $input = $_GET['insert'];

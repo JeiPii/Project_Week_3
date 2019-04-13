@@ -1,5 +1,10 @@
-<?php include_once '../connectDatabase.php'; ?>
 
+<?php 
+//login check
+require_once('../functionsPdo.php');
+require_once('../loginCheck.1.php');
+include_once '././connectDatabase.php'; 
+?>
 <!DOCTYPE html>
 <html>
 <head>
